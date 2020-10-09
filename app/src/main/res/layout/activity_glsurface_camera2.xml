@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/transparent"
+        app:contentInsetStart="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/toolbar_switch_iv"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:src="@mipmap/ic_camera_switch" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ViewStub
+        android:id="@+id/v_stub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/layout_surfacce" />
+
+    <FrameLayout
+        android:id="@+id/fl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ca_fuck"
+        android:padding="15dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_code"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="75dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/tv_hash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="11dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/take_picture_iv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/click_button_selector" />
+
+    <ImageView
+        android:id="@+id/picture_iv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:scaleType="centerCrop" />
+
+</RelativeLayout>
